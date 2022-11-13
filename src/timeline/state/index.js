@@ -4,9 +4,8 @@ import mergeReducers from "../../common/mergeReducers";
 
 const { add, remove, edit, reducer: timelinesReducer } = createItemsLogic("timelines");
 
-
 export const types = {
-    INCREASE_NEXT_PAGE: 'timeline/INCREASE_NEXT_PAGE',
+    INCREASE_NEXT_PAGE: "timeline/INCREASE_NEXT_PAGE",
     REQUEST_LIKE: "timeline/REQUEST_LIKE",
     ADD_LIKE: "timeline/ADD_LIKE",
     SET_LOADING: "timeline/SET_LOADING",
@@ -16,15 +15,16 @@ export const actions = {
     addTimeline: add,
     removeTimeline: remove,
     editTimeline: edit,
-    increaseNextPage: () => ({ types: types.INCREASE_NEXT_PAGE }),
-    requestLike: timeline => ({ types: types.REQUEST_LIKE, timeline }),
+    increaseNextPage: () => ({ type: types.INCREASE_NEXT_PAGE }),
+    requestLike: timeline => ({ type: types.REQUEST_LIKE, timeline }),
     addLike: (timelineId, value) => ({ type: types.ADD_LIKE, timelineId, value }),
     setLoading: isLoading => ({
         type: types.SET_LOADING,
         isLoading
     }),
 };
-const INITIAL_STATE = { nextPage: 0 };
+
+const INITIAL_STATE = { nextPage: 0, isLoading: false };
 const reducer = createReducer(INITIAL_STATE, {
     [types.INCREASE_NEXT_PAGE]: (state, action) => (state.nextPage += 1),
     [types.ADD_LIKE]: (state, action) => {
