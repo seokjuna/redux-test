@@ -1,5 +1,4 @@
 import React from "react";
-import store from "../../common/store";
 import { getNextFriend } from "../../common/mockData";
 import { addFriend } from "../state";
 import FriendList from "../component/FriendList";
@@ -10,7 +9,7 @@ export default function FriendMain() {
     const dispatch = useDispatch();
     function onADD() {
         const friend = getNextFriend();
-        store.dispatch(addFriend(friend));
+        dispatch(addFriend(friend));
     }
     console.log("FriendMain render");
     return (
