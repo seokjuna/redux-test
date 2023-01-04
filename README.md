@@ -12,5 +12,4 @@ https://seokjuna.notion.site/6-3-ba1322b21ae14682a36beff26e71cc31<br>
 - 상탯값은 순수 함수에 의해서만 변경되어야 한다<br>
 <br>
 
-![리덕스에서 상탯값이 변경되는 과정](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e590e576-b09b-4bfa-a22b-2d4b367bedda/Untitled.png)
-리덕스에서 상탯값이 변경되는 과정
+![리덕스 상탯값 변경 과정](https://user-images.githubusercontent.com/102382351/210492161-d00acea1-f0db-47bb-a9d8-812079a53cd2.png)
